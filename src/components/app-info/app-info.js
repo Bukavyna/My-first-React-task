@@ -1,7 +1,7 @@
 import './app-info.css';
 
 const AppInfo = () => {
-	let nameCompany = 'Taras & Pavel';
+	let nameCompany = "Taras & Pavel";
 	return (
 		<div className="app-info">
 			<h1>Облік працівників в компанії <i>'{nameCompany}'</i></h1>
