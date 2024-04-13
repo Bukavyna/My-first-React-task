@@ -7,7 +7,8 @@ class EmployersAddForm extends Component {
 		super(props);
 		this.state = {
 			name: '',
-			salary: ''
+			salary: '',
+			error: ''
 		}
 	}
 
@@ -17,17 +18,35 @@ class EmployersAddForm extends Component {
 		})
 	}
 
+	// onSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	this.props.onAdd(this.state.name, this.state.salary);
+	// 	this.setState({
+	// 		name: '',
+	// 		salary: ''
+	// 	})
+
+
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.onAdd(this.state.name, this.state.salary);
-		this.setState({
-			name: '',
-			salary: ''
-		})
+		const {name, salary} = this.state;
+
+		if (name.length >= 3 && salary !== '') {
+			this.props.onAdd(name, salary);
+			this.setState({
+				name: '',
+				salary: '',
+				error: ''
+			})
+		} else {
+			this.setState({
+				error: `Не правильний ввід даних!`
+			});
+		}
 	}
 
 	render() {
-			const {name, salary} = this.state;
+			const {name, salary, error} = this.state;
 
 		return (
 			<div className={'app-add-form'}>
@@ -53,6 +72,7 @@ class EmployersAddForm extends Component {
 									Додати
 					</button>
 				</form>
+				{error && <div style={{ color: 'red' }}>{error}</div>}
 			</div>
 		)
 	}
