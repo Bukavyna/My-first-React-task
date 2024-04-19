@@ -1,15 +1,13 @@
 import { Component } from 'react';
 
-import './employers-add-form.css';
+// import './employers-add-form.css';
+import './employers-add-form.scss';
 
 class EmployersAddForm extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+	state = {
 			name: '',
 			salary: '',
 			error: ''
-		}
 	}
 
 	onValueChange = (e) => {
@@ -17,15 +15,6 @@ class EmployersAddForm extends Component {
 			[e.target.name] : e.target.value
 		})
 	}
-
-	// onSubmit = (e) => {
-	// 	e.preventDefault();
-	// 	this.props.onAdd(this.state.name, this.state.salary);
-	// 	this.setState({
-	// 		name: '',
-	// 		salary: ''
-	// 	})
-
 
 	onSubmit = (e) => {
 		e.preventDefault();
