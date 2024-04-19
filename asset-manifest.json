@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github.io/My-first-React-task/static/css/main.48f08060.css",
+    "main.js": "/github.io/My-first-React-task/static/js/main.6e32ec3f.js",
+    "index.html": "/github.io/My-first-React-task/index.html",
+    "main.48f08060.css.map": "/github.io/My-first-React-task/static/css/main.48f08060.css.map",
+    "main.6e32ec3f.js.map": "/github.io/My-first-React-task/static/js/main.6e32ec3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48f08060.css",
+    "static/js/main.6e32ec3f.js"
+  ]
+}
